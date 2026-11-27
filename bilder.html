@@ -145,7 +145,18 @@
             </p>
             <div class="pictures">
                 <div class="edited high">
-                    <img src="images/bildserie006.jpg" alt="Tagen uppifrån, en vit blomma med rosa kanter och gul mitten, ljusare färger, gräset bakom är någon mer deskretare grön färg">
+                     <source
+                        type="image/webp"
+                        srcset="
+                        images/bildserie006-400px.webp 400w,
+                        images/bildserie006-800px.webp 800w,
+                        images/bildserie006-1200px.webp 1200w
+                        "
+                        sizes="(max-width: 1880px) 43vw, 507px">
+                    <img
+                        src="images/bildserie006.jpg"
+                        alt="Tagen uppifrån, en vit blomma med rosa kanter och gul mitten, ljusare färger, gräset bakom är någon mer deskretare grön färg"
+                    > 
                     <p>Redigerad bild</p>
                 </div>
                 <div class="original high">
