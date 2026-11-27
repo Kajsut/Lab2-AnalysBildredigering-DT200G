@@ -9,6 +9,7 @@ const nextButton = document.querySelector(".next-slide");
 const counter = document.querySelector(".counterslide");
 const slideImg = document.querySelector(".slideshow");
 
+const pictures = document.querySelectorAll(".slide-picture");
 
 // Öppnar och stänger hamburgarmenyn
 menuButton.addEventListener("click", function() {
@@ -19,23 +20,6 @@ menuButton.addEventListener("click", function() {
 /**
  * Bilspelet
  */
-
-//Bilderna och alt-texter till bildspelet
-const pictures = [
-    {
-        src: "images/bildserie010.jpg",
-        alt: "En kossa som ligger i ett grönt landskap, lite gultonad bild med äkta färger"
-    },
-    {
-        src: "images/bildserie001.jpg",
-        alt: "Lila fingerborgsblommor varav en klocka är mintgrön. Gröna berg bakom blommorna i ljusa färger"
-    },
-    {
-        src: "images/bildserie006.jpg",
-        alt: "Tagen uppifrån, en vit blomma med rosa kanter och gul mitten, ljusare färger, gräset bakom är någon mer deskretare grön färg"
-    }
-];
-
 let picNow = 0;
 
 //När man trycker på högerknappen i bildspelet, så räknar det ut vilken bild som ska visas
@@ -64,8 +48,12 @@ function buttonPrevPic () {
 
 //Visar upp nästa bild, samt skriver ut vilket nummer på bilden det är
 function showNextPic (picNow) {
-    slideImg.src = pictures[picNow].src;
-    slideImg.alt = pictures[picNow].alt;
+    
+    pictures.forEach(picture => {
+        picture.classList.remove("picture-shows");
+    });
+
+    pictures[picNow].classList.add("picture-shows");
 
     counter.innerHTML = `${picNow +1}/${pictures.length}`;
 }
