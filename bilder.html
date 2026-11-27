@@ -71,8 +71,19 @@
                     <p>Redigerad bild</p>
                 </div>
                 <div class="original wide">
-                   <img src="images/orginalbild010.jpg" alt="En kossa som ligger i ett grönt landskap, röd beläggning över hela bilden">
-                    <p>Orginalbild</p> 
+                   <source
+                        type="image/webp"
+                        srcset="
+                        images/orginalbild010-400px.webp 400w,
+                        images/orginalbild010-800px.webp 800w,
+                        images/orginalbild010-1200px.webp 1200w
+                        "
+                        sizes="(max-width: 1880px) 43vw, 507px">
+                    <img
+                        src="images/orginalbild010.jpg"
+                        alt="En kossa som ligger i ett grönt landskap, röd beläggning över hela bilden"
+                    > 
+                   <p>Orginalbild</p> 
                 </div>
             </div>
         </article>
