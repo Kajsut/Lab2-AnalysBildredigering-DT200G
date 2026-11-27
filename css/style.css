@@ -67,20 +67,25 @@ main button {
 
 /*Herosektionen, bild och h1*/
 .herosection {
-    /*Hur herobilden ser ut*/
-    background-image: url("../images/header.png");
-    background-size: cover;
     height: 400px;
-
-    /*Hur texten på bilden ligger*/
     display: flex;
     justify-content: center;
     align-items: center;
-    background-position: center;
+    position: relative;
+}
+
+.herosection img {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0;
 }
 
 .herosection h1 {
     background: transparent;
+    position: relative;
 }
 
 footer,
@@ -154,7 +159,6 @@ p {
     justify-self: center;
 
 }
-
 
 .portrait {
     width: 30%;
