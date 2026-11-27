@@ -131,6 +131,32 @@ p {
     justify-content: center;
 }
 
+.slideshow-buttons {
+    display: grid;
+}
+
+.slide-picture {
+    opacity: 0;
+    display: none;
+}
+
+.slide-picture.picture-shows {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    
+}
+
+.slide-picture img {
+    width: 95%;
+    height: auto;
+    margin-top: 1rem;
+    display: block;
+    justify-self: center;
+
+}
+
+
 .portrait {
     width: 30%;
 }
