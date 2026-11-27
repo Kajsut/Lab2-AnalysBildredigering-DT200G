@@ -43,7 +43,20 @@
                     Naturen älskar jag också! Är ute mycket med min hund, och helst min släkts hundar också.
                     Det var därför jag valde just dessa tre bilderna, för de är saker som gör mig glad!
                 </p>
-                <img class="portrait" src="images/portrait.png" alt="Kajsa Widén med transparent bakgrund">
+                <picture class="portrait">
+                    <source
+                        type="image/webp"
+                        srcset="
+                        images/portrait-400px.webp 400w,
+                        images/portrait-800px.webp 800w,
+                        images/portrait-1200px.webp 1200w
+                        "
+                        sizes="(max-width: 1880px) 27vw, 507px">
+                    <img
+                        src="images/portrait.png"
+                        alt="Kajsa Widén med transparent bakgrund"
+                    >
+                </picture>
             </div>
         </div>
     </main>
