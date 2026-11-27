@@ -46,7 +46,50 @@
             Under <em>Om mig</em> finns det lite text om mig samt en bild som jag har frilagt.</p>
         <!--Bildspelet-->    
         <div class="slideshow-buttons">
-            <img class="slideshow" src="images/bildserie010.jpg" alt="En kossa som ligger i ett grönt landskap, lite gultonad bild med äkta färger">
+            <picture>
+                <source
+                    type="image/webp"
+                    srcset="
+                    images/bildserie010-400px.webp 400w,
+                    images/bildserie010-800px.webp 800w,
+                    images/bildserie010-1200px.webp 1200w
+                    "
+                    sizes="(max-width: 1880px) 43vw, 507px">
+                <img
+                    src="images/bildserie010.jpg"
+                    alt="En kossa som ligger i ett grönt landskap, lite gultonad bild med äkta färger"
+                >
+            </picture>
+            <picture>
+                <source
+                    type="image/webp"
+                    srcset="
+                    images/bildserie001-400px.webp 400w,
+                    images/bildserie001-800px.webp 800w,
+                    images/bildserie001-1200px.webp 1200w
+                    "
+                    sizes="(max-width: 1880px) 43vw, 507px">
+                <img
+                    src="images/bildserie001.jpg"
+                    alt="Lila fingerborgsblommor varav en klocka är mintgrön. Gröna berg bakom blommorna i ljusa färger"
+                    loading="lazy"
+                > 
+            </picture>
+            <picture>
+                <source
+                    type="image/webp"
+                    srcset="
+                    images/bildserie006-400px.webp 400w,
+                    images/bildserie006-800px.webp 800w,
+                    images/bildserie006-1200px.webp 1200w
+                    "
+                    sizes="(max-width: 1880px) 43vw, 507px">
+                <img
+                    src="images/bildserie006.jpg"
+                    alt="Lila fingerborgsblommor varav en klocka är mintgrön. Gröna berg bakom blommorna i ljusa färger"
+                    loading="lazy"
+                    > 
+            </picture>    
             <!--Knapparna i bildspelet, samt bildräknaren-->
             <div class="slidebuttons">
                 <button class="prev-slide">&#8249;</button>
